@@ -13,6 +13,15 @@ https://sourceforge.net/projects/nrf52-ssd1331/
 
 to produce a working demo of uGUI 3.0
 
+Here is the connection matrix:
+
+spi2 mosi	  pb15	  ssd1331_data
+ssd1331 DC	pb14	  ssd1331_dc
+spi2 sck	  pb13	  ssd1331_clk
+spi2 nss	  pb12	  ssd1331_cs
+ssd1331 RES	pb11	  ssd1331_res
+
+
 It uses FreeRTOS
 
 the uGUI code writes into a frame buffer, which is then pushed to the display via SPI 30 frames/sec.
